@@ -1,5 +1,4 @@
 ---
-# THIS IS A SAMPLE ".tas.yml" CONFIGURATION FILE
 # FIRSTLY - You need to specify which testing framework you are using. Currently supported JS frameworks are : mocha, jest and jasmine.
 framework: mocha # mocha # framework should be as per your project
 
@@ -21,3 +20,4 @@ preMerge:
     # glob-patterns to discover tests to run in case of postMerge
     - "./test/**/*.js"
 configFile: mocha.opts
+# parallelism: 4
