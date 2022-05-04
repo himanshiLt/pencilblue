@@ -18,3 +18,5 @@ preMerge:
     # glob-patterns to discover tests to run in case of postMerge
     - "./test/**/*.js"
 configFile: mocha.opts
+version: 1.0.0
+# parallelism: 2
