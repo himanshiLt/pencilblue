@@ -11,3 +11,4 @@ postMerge:
     - "./test/**/*.js"
 configFile: mocha.opts
 version: 1.0
+
