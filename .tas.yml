@@ -18,4 +18,3 @@ preMerge:
   pattern:
     - "./test/**/*.js"
 configFile: mocha.opts
-# parallelism: 2
