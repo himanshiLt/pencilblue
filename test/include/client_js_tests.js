@@ -42,6 +42,12 @@ describe('AdminNavigation', function() {
 
             ClientJs.getAngularObjects({foo: 'bar', true: 'function(val){return true;}'}).should.equal(expectedResult);
         });
+        
+        it('by should return a valid script tag containing the passed code', function() {
+            var expectedResult = '$scope.foo = "bar";\n$scope.true = function(val){return true;};\n';
+
+            ClientJs.getAngularObjects({foo: 'bar', true: 'function(val){return true;}'}).should.equal(expectedResult);
+        });
     });
     
     describe('ClientJS.includeJS', function() {
