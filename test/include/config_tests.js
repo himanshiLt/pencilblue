@@ -38,5 +38,25 @@ describe('Configuration', function() {
             config.should.be.type('object');
             config.siteRoot.should.eql('http://apples.2.apples.com');
         });
+        
+        it('1- should ensure any ending "/" is removed from the siteRoot', function() {
+            
+            var overrides = {
+                siteRoot: "http://apples.2.apples.com/"
+            };
+            var config = Configuration.mergeWithBase(overrides);
+            config.should.be.type('object');
+            config.siteRoot.should.eql('http://apples.2.apples.com');
+        });
+        
+        it('2- should ensure any ending "/" is removed from the siteRoot', function() {
+            
+            var overrides = {
+                siteRoot: "http://apples.2.apples.com/"
+            };
+            var config = Configuration.mergeWithBase(overrides);
+            config.should.be.type('object');
+            config.siteRoot.should.eql('http://apples.2.apples.com');
+        });
     });
 });
