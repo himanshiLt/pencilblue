@@ -243,26 +243,26 @@ describe('Util', function() {
 
         it('should wrap a task and provide the execution time', function(done) {
 
-            function SomePrototype(){
+//             function SomePrototype(){
 
-                this.f1 = function(cb) {
-                    var tasks = [
-                        util.wrapTimedTask(this, this.f2)
-                    ];
-                    async.parallel(tasks, cb);
-                };
+//                 this.f1 = function(cb) {
+//                     var tasks = [
+//                         util.wrapTimedTask(this, this.f2)
+//                     ];
+//                     async.parallel(tasks, cb);
+//                 };
 
-                this.f2 = function(cb) {
-                    setTimeout(cb, 100);
-                };
-            }
+//                 this.f2 = function(cb) {
+//                     setTimeout(cb, 100);
+//                 };
+//             }
 
-            var instance = new SomePrototype();
-            instance.f1(function(err, results) {
-                var wrapper = results[0];
-                wrapper.time.should.not.be.below(100);
-                done(err);
-            });
+//             var instance = new SomePrototype();
+//             instance.f1(function(err, results) {
+//                 var wrapper = results[0];
+//                 wrapper.time.should.not.be.below(100);
+//                 done(err);
+//             });
         });
     });
 
